@@ -3,9 +3,9 @@ import React from 'react';
 export const Context = React.createContext();
 
 const MyContext = ({children}) => {
-  const [name, setName] = React.useState('');
+  const [valor, setValor] = React.useState(1);
   const [moeda, setMoeda] = React.useState('EUR');
-  const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState(false);
 
   const options = [
     {
@@ -23,8 +23,8 @@ const MyContext = ({children}) => {
   ];
 
   const value = {
-    name, 
-    setName,
+    valor,
+    setValor,
     options,
     moeda,
     setMoeda,
