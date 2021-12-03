@@ -2,6 +2,17 @@ import React from 'react'
 import Input from './Input'
 import { Context }  from '../context/MyContext'
 import Select from './Select'
+import styled from 'styled-components';
+
+const Forms = styled.form `
+  border: 1px solid green;
+  display: flex;
+  width: 30rem;
+  height: 5rem;
+  border-radius: .4rem;
+  padding: 1rem;
+  color: #837d7d;
+`
 
 const Form = () => {
   const {valor, setValor, options, moeda, setMoeda, setData} =  React.useContext(Context)
@@ -23,7 +34,7 @@ const Form = () => {
 
   return (
     <div>
-      <form>
+      <Forms>
         <Input type='number' placeholder='digite um valor' value={valor} set={setValor}/>
 
         <Select
@@ -32,7 +43,7 @@ const Form = () => {
           options={ options }
           set={setMoeda}
         />
-      </form>
+      </Forms>
     </div>
   )
 }
