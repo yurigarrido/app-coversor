@@ -2,6 +2,7 @@ import React from 'react'
 import Input from './Input'
 import { Context }  from '../context/MyContext'
 import Select from './Select'
+import { StyledForm } from '../styled/form'
 
 const Form = () => {
   const {valor, setValor, options, moeda, setMoeda, getToken, getHourAndDate} =  React.useContext(Context)
@@ -13,7 +14,8 @@ const Form = () => {
 
   return (
     <div>
-      <form>
+      <StyledForm>
+        <h1>ConversorMoeda!</h1>
         <p>Informe o valor e moeda para conversão</p>
         <Input
           text='valor'
@@ -28,7 +30,7 @@ const Form = () => {
           options={ options }
           set={setMoeda}
         />
-      </form>
+      </StyledForm>
     </div>
   )
 }

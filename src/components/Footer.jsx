@@ -1,12 +1,13 @@
 import React from 'react'
+import { StyledFooter } from '../styled/footer';
 
 const Footer = () => {
   const data = new Date();
   const ano = data.getUTCFullYear();
   return (
-    <footer>
+    <StyledFooter>
       {ano}-ConversorMoeda!
-    </footer>
+    </StyledFooter>
   )
 }
 

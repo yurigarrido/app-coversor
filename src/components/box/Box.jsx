@@ -1,12 +1,11 @@
 import React from 'react'
 import { Context } from '../../context/MyContext';
+import { StyledData } from '../../styled/ data';
 
 const Box = () => {
   const {data, valor, date} = React.useContext(Context)
   return (
-    <div>
-      <h5>data da Consulta: {date}</h5>
-      <h3>12/5 </h3>
+    <StyledData>
       { data && data.map((item, index) => {
         const valorMoeda= +item.ask;
         const multiplicador = valor;
@@ -16,13 +15,15 @@ const Box = () => {
         return (
           <div key={ item.name }>
             <div>
-              <h5>{token}</h5>
-              <h3>{convertido}</h3>
+              <h3>{token}</h3>
+              <h4>{convertido}</h4>
             </div>
           </div>
         )
       })}
-    </div>
+      <h3>Data da Consulta: </h3>
+      <h4>{date}</h4>
+    </StyledData>
   )
 }
 

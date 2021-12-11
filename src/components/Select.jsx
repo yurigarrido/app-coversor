@@ -1,13 +1,15 @@
 import React from 'react'
+import { StyledLabel } from '../styled/label'
+import { StyledSelect } from '../styled/select'
 
 
 const Select = ({ text, options, name, set}) => {
   return (
     <div>
-      <label htmlFor={ name }>
+      <StyledLabel htmlFor={ name }>
         {text}
-      </label>
-      <select
+      </StyledLabel>
+      <StyledSelect
         name={ name }
         onChange={ ({target}) => set(target.value)}
       >
@@ -18,7 +20,7 @@ const Select = ({ text, options, name, set}) => {
           >{option.name}
           </option>
         )}
-      </select>
+      </StyledSelect>
     </div>
   )
 }
