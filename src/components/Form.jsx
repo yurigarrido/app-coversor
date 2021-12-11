@@ -2,29 +2,27 @@ import React from 'react'
 import Input from './Input'
 import { Context }  from '../context/MyContext'
 import Select from './Select'
+import { StyledForm } from '../styled/form'
 
 const Form = () => {
-  const {valor, setValor, options, moeda, setMoeda, setData} =  React.useContext(Context)
+  const {valor, setValor, options, moeda, setMoeda, getToken, getHourAndDate} =  React.useContext(Context)
 
   React.useEffect(() => {
-    if( moeda === 'EUR') fetchApi(`https://economia.awesomeapi.com.br/last/USD-${moeda},BRL-${moeda}`);
-
-    if(moeda === 'USD') fetchApi(`https://economia.awesomeapi.com.br/last/BRL-${moeda},EUR-${moeda}`)
-
-    if(moeda === 'BRL') fetchApi(`https://economia.awesomeapi.com.br/last/USD-${moeda},EUR-${moeda}`)
-
+    getToken(moeda);
+    getHourAndDate()
   }, [moeda])
-
-  const fetchApi = async (url) => {
-    const response = await fetch(url);
-    const json = await response.json();
-    setData(Object.values(json));
-  }
 
   return (
     <div>
-      <form>
-        <Input type='number' placeholder='digite um valor' value={valor} set={setValor}/>
+      <StyledForm>
+        <h1>ConversorMoeda!</h1>
+        <p>Informe o valor e moeda para conversão</p>
+        <Input
+          text='valor'
+          type='number'
+          placeholder='digite um valor'
+          value={valor}
+          set={setValor}/>
 
         <Select
           text='Selecione uma moeda para ser usada como base: '
@@ -32,7 +30,7 @@ const Form = () => {
           options={ options }
           set={setMoeda}
         />
-      </form>
+      </StyledForm>
     </div>
   )
 }
