@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# ConversorMoeda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição:
 
-## Available Scripts
+  O ConversorMoeda é um aplicativo pensado primeiramente em desktops, com o intuito de facilitar no dia a dia de quem busca por informações sobre a cotação do Euro, Dólar ou Real. O aplicativo buscar trazer uma interface simples e amigavél ao usuário.
+  
+## Funcionalidades:
+   * A partir de determinada moeda como base, o ConversorMoeda consegue fazer a conversão de maneira simples e rápida para as outras moedas.
+  
+## Tecnologias ultilizadas:
+  Para desenvolver foram usadas as seguintes tecnologias:
+  <br/>
+  
+  * Desenvolvimento
+    * JavaScript ES6+
+    * ReactJs
+    * Web components
+  * Manipulação de estados e funções globais
+    * Context API
+  * Testes
+    * Cypress
+  * Estilização
+    * Styled Components
+  * API's
+    * Para buscar a cotação das moedas foi usada a seguinte API
+    [veja aqui](https://economia.awesomeapi.com.br/last/USD-eur,BRL-EUR)
+     
+ ## O projeto:
+ 1. Clone o repositório
+  * `git@github.com:yurigarrido/app-coversor.git`
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd busca-cep`
+    * confira se está na branch master
 
-In the project directory, you can run:
+2. Instale as dependências:
+    * `npm install`
+3. Abra o projeto no navegador:
+    * `npm start`
+    * é importante que o projeto estaja na porta 3000 para que os testes funcionem da maneira correta
+4. Executando os testes:
+    * `npm run cypress`
+      * Após isso o cypress abrira com os segintes arquivos disponíveis para serem executados, basta clicar em um e o teste rodará.:
+         * HOME - testa toda a aplicação. 
 
-### `yarn start`
+## Ilustração
+### Aqui podemos ver a aplicação
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![conversorMoeda](https://user-images.githubusercontent.com/81384601/145697398-e8154a41-ccf6-46c8-9aed-02dcb152cfb1.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+<br />
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
