@@ -29,7 +29,7 @@
  1. Clone o repositório
   * `git@github.com:yurigarrido/app-coversor.git`
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd busca-cep`
+    * `cd app-conversor`
     * confira se está na branch master
 
 2. Instale as dependências:
