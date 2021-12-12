@@ -18,7 +18,7 @@ const Form = () => {
         <h1>ConversorMoeda!</h1>
         <p>Informe o valor e moeda para conversão</p>
         <Input
-          text='valor'
+          text='Valor'
           type='number'
           placeholder='digite um valor'
           value={valor}
