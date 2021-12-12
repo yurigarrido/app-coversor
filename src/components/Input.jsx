@@ -10,7 +10,7 @@ const Input = ({type, value, placeholder, set, text}) => {
       <StyledInput
         type={type}
         value={value}
-        onChange={(e) => value >= 1 ? set(e.target.value) : set(1)}
+        onChange={(e) =>  set(e.target.value)}
         placeholder={placeholder}
       >
       </StyledInput>

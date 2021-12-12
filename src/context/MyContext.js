@@ -3,7 +3,7 @@ import React from 'react';
 export const Context = React.createContext();
 
 const MyContext = ({children}) => {
-  const [valor, setValor] = React.useState(1);
+  const [valor, setValor] = React.useState('');
   const [moeda, setMoeda] = React.useState('EUR');
   const [data, setData] = React.useState(false);
   const [date, setDate] = React.useState('')
